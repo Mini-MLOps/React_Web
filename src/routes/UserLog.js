@@ -57,7 +57,7 @@ function UserLog() {
   }, [currentPage]);
 
   return (
-    <div class="g-sidenav-show   bg-gray-100" id="fontList">
+    <div class="g-sidenav-show bg-gray-100" id="fontList">
       <div class="min-height-250 bg-primary position-absolute w-100"></div>
       <Aside />
       <main class="main-content position-relative border-radius-lg ">

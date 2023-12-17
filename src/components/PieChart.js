@@ -1,8 +1,13 @@
 import { ResponsivePie } from "@nivo/pie";
 import React, { useState, useEffect } from "react";
+import { scaleOrdinal } from "d3-scale";
 
-const PieChart = ({ data /* see data tab */ }) => {
+const PieChart = () => {
   const [pieData, setPieData] = useState([]);
+
+  const getColorScale = scaleOrdinal()
+    .domain(["Good", "Bad", "none"])
+    .range(["hsl(200, 70%, 50%)", "hsl(0, 70%, 50%)", "hsl(0, 0%, 70%)"]);
 
   const getPieChartData = async () => {
     await fetch("/api/user-logs/ratio", {
@@ -57,12 +62,13 @@ const PieChart = ({ data /* see data tab */ }) => {
             value: pieData.none,
           },
         ]}
+        sortByValue={true}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.25}
         padAngle={0.7}
         cornerRadius={3}
         activeOuterRadiusOffset={8}
-        colors={{ scheme: "set1" }}
+        colors={(datum) => getColorScale(datum.label)}
         borderWidth={1}
         borderColor={{
           from: "color",

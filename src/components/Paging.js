@@ -14,7 +14,11 @@ const Paging = ({ currentPage, totalElements, size, handlePageChange }) => {
           }}
         >
           <Pagination
-            count={Math.round(totalElements / size + 1)}
+            count={
+              totalElements % size == 0
+                ? Math.round(totalElements / size)
+                : Math.round(totalElements / size) + 1
+            }
             page={currentPage + 1}
             showFirstButton
             showLastButton

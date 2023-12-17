@@ -64,10 +64,6 @@ function Data() {
     setCurrentPage(pageNumber - 1);
   };
 
-  useEffect(() => {
-    getMovieData(currentPage);
-  }, [currentPage, movies]);
-
   const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
     <input
       type="text"
@@ -94,6 +90,10 @@ function Data() {
 
     return item.value;
   };
+
+  useEffect(() => {
+    getMovieData(currentPage);
+  }, [currentPage, movies]);
 
   return (
     <div className="g-sidenav-show bg-gray-100">
