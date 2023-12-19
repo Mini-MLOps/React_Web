@@ -39,7 +39,7 @@ const PieChart = () => {
   };
 
   useEffect(() => {
-    getPieChartData(); // This will run on every render
+    getPieChartData();
   }, [pieData]);
 
   return (
@@ -63,7 +63,7 @@ const PieChart = () => {
           },
         ]}
         sortByValue={true}
-        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        margin={{ top: 20, right: 40, bottom: 80, left: 40 }}
         innerRadius={0.25}
         padAngle={0.7}
         cornerRadius={3}

@@ -6,7 +6,6 @@ function Aside() {
   const [trainCount, setTrainCount] = useState(0);
   const [deployStatus, setDeployStatus] = useState(false);
   const [deployCount, setDeployCount] = useState(0);
-  const [isLogout, setIsLogout] = useState(false);
 
   const fetchTrainStatus = () => {
     fetch("/api/tasks/train/status", {
@@ -40,7 +39,6 @@ function Aside() {
 
   const logout = () => {
     localStorage.removeItem("access-token");
-    setIsLogout(true);
     window.location.reload();
   };
 
@@ -85,7 +83,7 @@ function Aside() {
           id="iconSidenav"
         ></i>
         <div>
-          <h5>Mini MLops</h5>
+          <h5>Mini MLOps</h5>
         </div>
       </div>
       <hr className="horizontal dark mt-0" />

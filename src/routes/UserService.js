@@ -103,7 +103,7 @@ function UserService() {
           className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           id="fontList"
         >
-          <h2>영화 제목이 뭐였더라?</h2>
+          <h2>영탐정 - 영화 제목이 뭐였더라?</h2>
         </div>
         <div className="row row-cols-1 row-cols-md-2 g-4">
           <div className="col d-flex flex-column justify-content-between">
