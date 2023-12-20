@@ -9,8 +9,8 @@ function ModelTrain() {
   now.setDate(new Date().getDate() - 1095);
   // const [dataStartDate, setStart] = useState(now);
   // const [dataEndDate, setEnd] = useState(new Date());
-  const [dataStartDate, setStart] = useState(new Date("2020-01-01"));
-  const [dataEndDate, setEnd] = useState(new Date("2022-01-01"));
+  const [dataStartDate, setStart] = useState(new Date("2007-01-01"));
+  const [dataEndDate, setEnd] = useState(new Date("2011-01-01"));
   const [vectorSize, setVectorSize] = useState("100");
   const [windowSize, setWindowSize] = useState("5");
   const [minCount, setMinCount] = useState("1");

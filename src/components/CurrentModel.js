@@ -138,7 +138,9 @@ function CurrentModel() {
               <div id="currentModelKey">sg</div>
             </th>
             <td>
-              <div id="currentModelContents">{currentModel.sg}</div>
+              <div id="currentModelContents">
+                {currentModel.sg == 0 ? "CBOW" : "Skip-gram"}
+              </div>
             </td>
           </tr>
           <tr id="currentModelBorder">
